@@ -20,7 +20,7 @@ class ApplicationController < Sinatra::Base
     @user.save
     #@user = User.create(params)
     session[:id] = @user.id 
-    binding.pry 
+    
     redirect '/users/home'
   end
 
