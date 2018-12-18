@@ -16,7 +16,7 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/registrations' do
-    binding.pry 
+     
     @user = User.create(params)
     @user.id = session[:id]
     redirect '/users/home'
