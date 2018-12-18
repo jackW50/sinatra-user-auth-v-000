@@ -16,7 +16,7 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/registrations' do
-    @user = User.new(name: params[:name], email: params[:email], password: [:password])
+    @user = User.new(name: params[:name], email: params[:email], password: params[:password])
     @user.save
     #@user = User.create(params)
     session[:id] = @user.id 
